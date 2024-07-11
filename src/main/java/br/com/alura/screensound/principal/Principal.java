@@ -1,5 +1,8 @@
 package br.com.alura.screensound.principal;
 
+import br.com.alura.screensound.model.Artista;
+import br.com.alura.screensound.model.TipoArtista;
+
 import java.util.Scanner;
 
 public class Principal {
@@ -52,20 +55,25 @@ public class Principal {
     }
 
     private void pesquisarDadosDoArtista() {
+
     }
 
     private void buscarMusicasPorArtista() {
     }
 
     private void listarMusicas() {
-        
     }
 
     private void cadastrarMusicas() {
-        
     }
 
     private void cadastrarArtistas() {
-        
+        System.out.println("Informe o nome desse artista: ");
+        var nome = leitura.nextLine();
+        System.out.println("Informe o tipo desse artista: (solo, dupla ou banda)");
+        var tipo = leitura.nextLine();
+        TipoArtista tipoArtista = TipoArtista.valueOf(tipo.toUpperCase());
+        Artista artista = new Artista(nome, tipoArtista);
+
     }
 }
